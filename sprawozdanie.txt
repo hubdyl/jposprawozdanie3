@@ -1,0 +1,51 @@
+
+1. Opis działania programu
+Na początku program tworzy 4 obiekty klasy Vector2D  z zainicjowanymi wartosciami,
+nastepnie tworzy 4 obiekty klasy Vector2D, które przyjmują współrzedne, zgodnie 
+z zdefiniowanymi wcześniej metodami : dodawania,odejmowania dwóch wektorów,
+przemnożeniu 1 wektora przez stałą oraz normalizację wektora.
+Program liczy również długość wektora.
+
+Na załączonym zdjęciu:
+1 operacją jest dodanie wektora1 do wektora2,
+2 operacją jest odjecie od wektora1 wektora2,
+3 operacją jest przemnożenie wektora4 przez stała = 20,
+4 operacją jest normalizacja wektora2.
+
+Opis działania progamu na 5:
+
+Program tworzy 11 obiektów, mogłoby być mniej lecz uznałem że dla lepszej wizualicacji,
+należy zamienić długość w mm na mpx przyjąłem ze 1mm = 3mp.
+Następnie zapisuje wektory po wywolaniu metody changeWektor(), do obiektów klasy
+Line2D. Tworzy również obiekty klasy Pollygon o nazwie grot1,2... , do narysowania
+grotu, przeliczenie współrzędnych x i y jest zawarte  w metodzie klasy Vector2D,
+zapisywanie te współrzędne po przeliczeniu są do talibyc xArray oraz yArray, 
+z których korzysta by stworzyć obiekt klasy Pollygon, tak aby wyglądał jak grot.
+W klasie Vector2D znajduję się również metoda która pozwala obliczyć w jakim miejscu,
+ma znajdować się podpis wektora.
+
+
+2. Odpowiedzi na pytania:
+
+
+Ad. 1
+Klasa Timer służy do pisania aplikacji np. Gier komputerowych, wywoluje się ją po to by coś trwało cyklicznie.
+Programując jej cykliczne wywołanie dla naszego przypadku SimTask używamy takiej formuły : 
+
+Timer timer1 = new Timer();
+SimTask timer1_task = new SimTask();
+timer1.schedule (timer1_task, 0, 20);
+
+drugi parametr -  po ilu milisekundach program ma ruszyc,
+trzeci parametr - definiuje czas pomiedzy kolejnymi wywowlaniami.
+
+Ad. 2
+Obiekt zapisujemy jako przesteń w pamięci ram, składająca się z kilku typów prostych i używając
+metody do zwrócenia obiektu zwraca nam cała przestrzeń skladająca się z n typów prostych.
+Natomiast typ prosty jest pojedynczym elementem w pamięci, zwracająć typ prosty zwracamy 
+tylko jeden element.
+
+Ad. 3
+Grafike na powierzchni appletu rysujemy za pomocą metody paint(Graphics g)
+w ciele tej metody używamy np. g.drawOval(odpowiednie parametry podane w mpx),
+Rysowanie w applecie jest pokazane w kodzie który załączyłem oraz zailustowane na zdjęciu.
